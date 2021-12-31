@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.HomeFragment"
+    android:background="@color/blue_200"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_0.5_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_0.2_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_0.8_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/home_tv_title"
+        android:textAlignment="center"
+        android:textColor="@color/blue_600"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gl_0.2_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_0.2_horizontal" />
+
+    <TextView
+        android:id="@+id/participants"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/home_tv_participants"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/sp_participants"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Spinner
+        android:id="@+id/sp_participants"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_0.5_horizontal"
+        />
+
+    <Button
+        android:id="@+id/bt_activities"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        android:text="@string/home_bt_activity"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/gl_0.8_horizontal"
+        tools:layout_editor_absoluteX="30dp" />
+
+
+    <TextView
+        android:id="@+id/tw_terms_and_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:layout_margin="30dp"
+        android:textColor="@color/black"
+        android:text="@string/home_bt_terms_and_conditions"
+        app:layout_constraintTop_toBottomOf="@id/bt_activities"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

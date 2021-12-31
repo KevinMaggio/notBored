@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.notbored.ui.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_activitiesFragment"
+            app:destination="@id/activitiesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_conditionFragment"
+            app:destination="@id/conditionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/conditionFragment"
+        android:name="com.example.notbored.ui.fragment.ConditionFragment"
+        android:label="fragment_condition"
+        tools:layout="@layout/fragment_condition" />
+    <fragment
+        android:id="@+id/activitiesFragment"
+        android:name="com.example.notbored.ActivitiesFragment"
+        android:label="fragment_activities"
+        tools:layout="@layout/fragment_activities" >
+        <action
+            android:id="@+id/action_activitiesFragment_to_recreationalFragment"
+            app:destination="@id/recreationalFragment" />
+        <action
+            android:id="@+id/action_activitiesFragment_to_randomFragment"
+            app:destination="@id/randomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recreationalFragment"
+        android:name="com.example.notbored.RecreationalFragment"
+        android:label="fragment_recreational"
+        tools:layout="@layout/fragment_recreational" />
+    <fragment
+        android:id="@+id/randomFragment"
+        android:name="com.example.notbored.RandomFragment"
+        android:label="fragment_random"
+        tools:layout="@layout/fragment_random" />
+</navigation>
