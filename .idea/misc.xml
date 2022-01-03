@@ -8,7 +8,8 @@
         <entry key="app/src/main/res/layout/fragment_condition.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/layout/fragment_random.xml" value="0.20833333333333334" />
-        <entry key="app/src/main/res/layout/fragment_recreational.xml" value="0.20833333333333334" />
+        <entry key="app/src/main/res/layout/fragment_recreational.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/items_activities.xml" value="0.20833333333333334" />
       </map>
     </option>
   </component>

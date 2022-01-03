@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_condition" />
     <fragment
         android:id="@+id/activitiesFragment"
-        android:name="com.example.notbored.ActivitiesFragment"
+        android:name="com.example.notbored.ui.fragment.ActivitiesFragment"
         android:label="fragment_activities"
         tools:layout="@layout/fragment_activities" >
         <action
@@ -36,12 +36,12 @@
     </fragment>
     <fragment
         android:id="@+id/recreationalFragment"
-        android:name="com.example.notbored.RecreationalFragment"
+        android:name="com.example.notbored.ui.fragment.RecreationalFragment"
         android:label="fragment_recreational"
         tools:layout="@layout/fragment_recreational" />
     <fragment
         android:id="@+id/randomFragment"
-        android:name="com.example.notbored.RandomFragment"
+        android:name="com.example.notbored.ui.fragment.RandomFragment"
         android:label="fragment_random"
         tools:layout="@layout/fragment_random" />
 </navigation>
