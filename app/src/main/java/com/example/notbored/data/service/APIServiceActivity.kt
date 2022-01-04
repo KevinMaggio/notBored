@@ -11,4 +11,7 @@ interface APIServiceActivity {
         @Query("type") type: String,
         @Query("participants") participants: String
     ): Response<ResponseActivity>
+
+    @GET("api/activity?")
+    suspend fun getRandomActivity(@Query("participants")participants: String): Response<ResponseActivity>
 }

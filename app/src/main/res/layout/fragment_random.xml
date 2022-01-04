@@ -26,6 +26,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
+            android:id="@+id/ib_cancel"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_margin="20dp"
@@ -39,11 +40,11 @@
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold"
-            tools:text="prueba" />
+            android:text="@string/random_tv_title" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_random_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -90,7 +91,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:text="@string/tv_recreational_price"
+        android:text="@string/recreational_tv_price"
         android:textColor="@color/black"
         android:layout_margin="20dp"
         android:textSize="25sp"
@@ -107,7 +108,7 @@
         app:layout_constraintTop_toBottomOf="@id/iw_price" />
 
     <TextView
-        android:id="@+id/tv_relaxation"
+        android:id="@+id/tv_type"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         tools:text="category"
@@ -140,6 +141,7 @@
         tools:text="medium" />
 
     <Button
+        android:id="@+id/bt_try_another"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/blue_700"

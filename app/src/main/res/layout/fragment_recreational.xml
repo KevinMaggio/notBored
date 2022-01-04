@@ -25,12 +25,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
+            android:id="@+id/ib_cancel"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_margin="20dp"
             android:background="@drawable/back"/>
 
         <TextView
+            android:id="@+id/tv_recreational_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="60dp"
@@ -42,7 +44,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -89,7 +91,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:text="@string/tv_recreational_price"
+        android:text="@string/recreational_tv_price"
         android:textColor="@color/black"
         android:layout_margin="20dp"
         android:textSize="25sp"
@@ -119,6 +121,7 @@
         tools:text="medium" />
 
     <Button
+        android:id="@+id/bt_try_another"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/blue_700"

@@ -20,7 +20,7 @@ import java.util.*
 @AndroidEntryPoint
 class ActivitiesFragment : Fragment() {
 
-    lateinit var binding : FragmentActivitiesBinding
+    lateinit var binding: FragmentActivitiesBinding
     private val activitiesViewModel by activityViewModels<ActivitiesViewModel>()
 
 
@@ -30,27 +30,38 @@ class ActivitiesFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentActivitiesBinding.inflate(inflater, container, false)
-
-        Toast.makeText(context, getBundle(), Toast.LENGTH_SHORT).show()
         activitiesViewModel.setLiveActivities()
 
         binding.btRandom.setOnClickListener {
-         findNavController().navigate(R.id.action_activitiesFragment_to_randomFragment)
+            activitiesViewModel.getRandomActivity(getBundle()!!)
+            val bundle=Bundle()
+            bundle.putString("participants", getBundle()!!)
+            findNavController().navigate(R.id.action_activitiesFragment_to_randomFragment,bundle)
         }
 
         activitiesViewModel.liveListActivities.observe(viewLifecycleOwner, {
             initRecyclerView(it)
-        } )
+        })
         return binding.root
     }
 
-    fun initRecyclerView(listActivities: List<String>){
+    fun initRecyclerView(listActivities: List<String>) {
 
         val adapter = AdapterActivities(listActivities)
-        adapter.setOnItemClickListener(object :AdapterActivities.onItemClickListener{
+        adapter.setOnItemClickListener(object : AdapterActivities.onItemClickListener {
             override fun onItemClick(position: Int) {
-                val item = listActivities[position].lowercase(Locale.getDefault())
-                findNavController().navigate(R.id.action_activitiesFragment_to_recreationalFragment)
+                activitiesViewModel.getActivities(
+                    listActivities[position].lowercase(),
+                    getBundle()!!
+                )
+
+                val bundle = Bundle()
+                bundle.putString("type", listActivities[position].lowercase())
+                bundle.putString("participants", getBundle()!!)
+                findNavController().navigate(
+                    R.id.action_activitiesFragment_to_recreationalFragment,
+                    bundle
+                )
             }
         })
         // set rv,  layout and adapter
@@ -62,7 +73,6 @@ class ActivitiesFragment : Fragment() {
     fun getBundle(): String? {
         return arguments?.get("participants").toString()
     }
-
 
 
 }

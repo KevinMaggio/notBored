@@ -16,4 +16,7 @@ class ActivitiesRepository @Inject constructor(val apiService: APIServiceActivit
     suspend fun getActivity(type:String, participants: String): Response<ResponseActivity> {
        return apiService.getActivity(type,participants)
     }
+    suspend fun getRandomActivity(participants: String): Response<ResponseActivity> {
+        return apiService.getRandomActivity(participants)
+    }
 }

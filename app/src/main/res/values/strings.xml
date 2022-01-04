@@ -14,5 +14,7 @@
     <string name="activities_tv_title">Activities</string>
     <!-- Strings related with recreational fragment-->
     <string name="recreational_tv_participants">Participants</string>
-    <string name="tv_recreational_price">Price</string>
+    <string name="recreational_tv_price">Price</string>
+    <!-- Strings related with random fragment-->
+    <string name="random_tv_title">Random</string>
 </resources>

@@ -28,4 +28,13 @@ class ActivitiesViewModel @Inject constructor(val activitiesRepository: Activiti
             }
         }
     }
+
+    fun getRandomActivity(participants: String){
+        CoroutineScope(Dispatchers.IO).launch {
+            val call = activitiesRepository.getRandomActivity(participants)
+            if (call.isSuccessful){
+                liveResponseActivity.postValue(call.body())
+            }
+        }
+    }
 }
